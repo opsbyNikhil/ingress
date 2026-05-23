@@ -6,7 +6,7 @@ metadata:
 spec:
   rules:
     - http:
-        path:
+        paths:
           - path: /mochi
             pathType: prefix
             backend:
@@ -17,4 +17,3 @@ spec:
             backend:
               service:
                 name: puppy-svc-deployment
-                
