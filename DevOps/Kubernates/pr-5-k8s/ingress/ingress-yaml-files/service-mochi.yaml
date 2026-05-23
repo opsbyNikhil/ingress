@@ -9,3 +9,4 @@ spec:
     app: mochi-app
   ports:
       port: 80
+      protocol: TCP

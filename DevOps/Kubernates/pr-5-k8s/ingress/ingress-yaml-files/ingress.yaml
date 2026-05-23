@@ -8,12 +8,12 @@ spec:
     - http:
         paths:
           - path: /mochi
-            pathType: prefix
+            pathType: Prefix
             backend:
               service:
                 name: mochi-svc-deployment
           - path: /puppy
-            pathType: prefix
+            pathType: Prefix
             backend:
               service:
                 name: puppy-svc-deployment
