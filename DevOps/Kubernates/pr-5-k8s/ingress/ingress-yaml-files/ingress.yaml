@@ -12,8 +12,12 @@ spec:
             backend:
               service:
                 name: mochi-svc-deployment
+                port:
+                  number: 80
           - path: /puppy
             pathType: Prefix
             backend:
               service:
                 name: puppy-svc-deployment
+                port:
+                  number: 80
