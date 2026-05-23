@@ -8,6 +8,6 @@ spec:
   selector:
     app: mochi-app
   ports:
-      port: 80
+    - port: 80
       protocol: TCP
       targetPort: 80
