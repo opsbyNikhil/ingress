@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: puppy-svc-deployment
+  namespace: prod
+spec:
+  type: ClusterIP
+  selector:
+    app: puppy-app
+  ports:
+      port: 80

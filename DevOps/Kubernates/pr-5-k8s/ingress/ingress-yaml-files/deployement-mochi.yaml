@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mochi
+  namespace: prod
+  annotations:
+    kubernetes.io/change-cause: "Deploy in mochi"
+spec:
+  minReadySeconds: 5
+  replicas: 5
+  selector:
+    matchLabels:
+      app: mochi-app
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  template:
+    metadata:
+      name: mochi-pod
+      labels:
+        app: mochi-app 
+    spec:
+      containers:
+        - name: mochi-container
+          image: 984912521466.dkr.ecr.ap-south-1.amazonaws.com/prod/mochi:1.0
+          ports:
+            - containerPort: 80
+          imagePullPolicy: Always
+          

@@ -1,0 +1,2 @@
+FROM nginx
+ADD 2159_mochi_space /usr/share/nginx/html

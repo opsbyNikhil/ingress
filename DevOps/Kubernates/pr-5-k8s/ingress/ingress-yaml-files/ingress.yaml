@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-prod-app
+  namespace: prod
+spec:
+  rules:
+    - http:
+        path:
+          - path: /mochi
+            pathType: prefix
+            backend:
+              service:
+                name: mochi-svc-deployment
+          - path: /puppy
+            pathType: prefix
+            backend:
+              service:
+                name: puppy-svc-deployment
+                
