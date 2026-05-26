@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: ingress-prod-app
   namespace: prod
-  annotation:
+  annotations:
       alb.ingress.kubernetes.io/scheme: internet-facing
       kubernetes.io/ingress.class: alb
 spec:
